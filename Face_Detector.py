@@ -21,15 +21,15 @@ while True:
         ids, conf = rec.predict(gray[y:y + h, x:x + w])
         if conf >= 30 and conf <= 100:
             if ids == 1:
-                cv2.putText(frame, 'Tushar ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+                cv2.putText(frame, 'Person1 ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
             elif ids == 2:
-                cv2.putText(frame, 'Gaurav ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+                cv2.putText(frame, 'Person 2 ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
             elif ids == 3:
-                cv2.putText(frame, 'Aayush ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+                cv2.putText(frame, 'Person 3' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
             elif ids == 4:
-                cv2.putText(frame, 'Chanchal ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+                cv2.putText(frame, 'Person 4 ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
             elif ids == 5:
-                cv2.putText(frame, 'Neeraj ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+                cv2.putText(frame, 'Person 5 ' + str(conf), (x, y), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
         else:
             cv2.putText(frame, 'Unknown ', (x, y), font, 1, (255, 255, 0), 2, cv2.LINE_AA)
         cv2.imshow('frame', frame)
