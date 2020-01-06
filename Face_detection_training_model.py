@@ -1,3 +1,7 @@
+## To use the LBPH Face Recognizer....it should be installed by following steps:
+        # Uninstall Opencv
+        # install Opencv-contrib
+        
 import os
 import numpy as np
 from PIL import Image
@@ -15,8 +19,7 @@ def GetImagesWithID(path):
         Id = int(os.path.split(ImagePath)[-1].split('.')[1])
         faces.append(facenp)
         ID.append(Id)
-        # cv2.imshow('Training',facenp)
-        # cv2.waitKey(100)
+       
     return faces,ID
 
 
